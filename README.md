@@ -1,16 +1,16 @@
-# 🌆 POC – Image Segmentation (Cityscapes)  
+# POC – Image Segmentation (Cityscapes)  
 ### *DeepLabV3+ vs Mask2Former Comparison*
 
 ---
 
-## 🎯 Project Objective
+## Project Objective
 
 This Proof of Concept evaluates and compares two segmentation models — **DeepLabV3+ (baseline)** and **Mask2Former (state-of-the-art)** — on a reduced subset of the **Cityscapes** dataset.  
 The project includes a full pipeline: dataset preparation, training with **MLflow**, metrics comparison, a **FastAPI** inference backend, and a **Streamlit** user interface.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 POC/
 ├── POC_backend/
@@ -38,21 +38,21 @@ POC/
 
 ---
 
-## 🧠 Dataset Used — Cityscapes
+## Dataset Used — Cityscapes
 
 Cityscapes is a benchmark dataset of annotated urban street scenes.  
 For this POC, a **reduced subset (~100 images)** was selected to enable fast experimentation while keeping visual diversity.
 
 ---
 
-## ⚙️ Models Evaluated
+## Models Evaluated
 
-### 🔵 Baseline — DeepLabV3+ (ResNet50)
+### Baseline — DeepLabV3+ (ResNet50)
 - CNN-based architecture with atrous (dilated) convolutions  
 - Optimizer: AdamW  
 - Fully tracked with MLflow  
 
-### 🟠 Modern Model — Mask2Former (Transformer-based)
+### Modern Model — Mask2Former (Transformer-based)
 - Universal segmentation architecture  
 - Masked Attention Transformer decoder  
 - Multi-scale high-resolution feature processing  
@@ -60,7 +60,7 @@ For this POC, a **reduced subset (~100 images)** was selected to enable fast exp
 
 ---
 
-## 📊 Metrics Tracked (via MLflow)
+## Metrics Tracked (via MLflow)
 
 - **Training Loss**  
 - **Validation Loss**  
@@ -71,7 +71,7 @@ For this POC, a **reduced subset (~100 images)** was selected to enable fast exp
 
 ---
 
-## 📈 Results Summary
+## Results Summary
 
 | Model            | Pixel Accuracy | mIoU  | Inference Speed (img/s) |
 |------------------|----------------|-------|---------------------------|
@@ -79,11 +79,11 @@ For this POC, a **reduced subset (~100 images)** was selected to enable fast exp
 | **Mask2Former**  | **~0.95+**     | **~0.77+** | **~6.4**              |
 
 **Key takeaway:**  
-👉 **Mask2Former significantly outperforms DeepLabV3+** on all meaningful segmentation metrics while also being slightly faster to train and infer.
+**Mask2Former significantly outperforms DeepLabV3+** on all meaningful segmentation metrics while also being slightly faster to train and infer.
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ### Backend (FastAPI)
 - Hosts the chosen trained model  
@@ -98,9 +98,9 @@ For this POC, a **reduced subset (~100 images)** was selected to enable fast exp
 
 ---
 
-## 📦 Installation & Usage
+## Installation & Usage
 
-### 1️⃣ Clone the repository
+### 1️Clone the repository
 ```bash
 git clone <your_repo_url>
 cd POC
@@ -114,3 +114,4 @@ uvicorn main:app --reload
 cd ../POC_frontend
 pip install -r requirements.txt
 streamlit run app.py
+```
