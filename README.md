@@ -10,33 +10,6 @@ The project includes a full pipeline: dataset preparation, training with **MLflo
 
 ---
 
-## Project Structure
-
-POC/
-├── POC_backend/
-│ ├── main.py
-│ ├── model/ # Model files (ignored by Git)
-│ ├── install-app
-│ ├── install-conda
-│ └── requirements.txt
-│
-├── POC_frontend/
-│ ├── app.py
-│ ├── img/
-│ ├── metric_info/
-│ ├── mlruns/ # Ignored by Git
-│ └── requirements.txt
-│
-├── notebooks/
-│ ├── notebook1.ipynb
-│ └── notebook2.ipynb
-│
-├── slides/
-├── method_note.pdf
-└── README.md
-
-
----
 
 ## Dataset Used — Cityscapes
 
